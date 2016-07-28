@@ -1,0 +1,118 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url('images/11.jpg');
+    padding-top: 20px;
+    color: whitesmoke;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+div .phonesCells  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+#nav {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    background: rgba(123, 0, 2, 0.78);
+    border-color: transparent;
+    padding: 15px;
+}
+
+#nav span a {
+    color: #F89E11;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.leftBar {
+    float: left;
+}
+
+.leftBar a {
+    text-decoration: none;
+    color: #F8F8F8;
+}
+
+.leftBar a:hover {
+    color: #FF0000;
+}
+
+.rightBar {
+    float: right;
+}
+
+.container-fluid {
+    padding-top: 50px;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    color: #F89E11;
+    background-color: rgba(123, 0, 2, 0.78);
+    text-align: center;
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+    min-height: 100%;
+}
+
+.footer .page-wrap:after {
+    height: 10px;
+}
+
+.page-wrap {
+    min-height: 92%;
+    margin-bottom: -10px;
+}
+
+.col-sm-4 {
+    color: white;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    background-color: rgba(123, 0, 2, 0.78);
+    min-height: 270px;
+    border: 1px solid whitesmoke;
+}
+
+.imageThumb {
+    max-height: 200px;
+}
+
+.name {
+    font-size: large;
+    color: #F89E11;
+}
+
+.desc {
+    color: whitesmoke;
+    font-size: small;
+}
+p {
+    color: whitesmoke;
+}
+
+.col-md-7 {
+    width: 70%;
+}
