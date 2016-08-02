@@ -1,24 +1,46 @@
 <!doctype html>
 <html lang="en" ng-app="doorApp">
     <head>
+        <meta name="csrf-token" content="{!! csrf_token() !!}">
         <meta charset="utf-8">
         <title>Door Gallery</title>
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="app.css" />
         <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="app.module.js"></script>
-        <script src="nav/nav.module.js"></script>
-        <script src="nav/nav.component.js"></script>
-        <script src="door-list/door-list.module.js"></script>
-        <script src="door-list/door-list.component.js"></script>
+        <script src="app.config.js"></script>
+        <script src="bower_components/angularUtils-pagination/index.js"></script>
+        <script src="bower_components/angularUtils-pagination/dirPagination.js"></script>
+        <script src="bower_components/angularUtils-pagination/dirPagination.tpl.html"></script>
+        <script src="templates/auth/login/login.module.js"></script>
+        <script src="templates/auth/login/login.component.js"></script>
+        <script src="templates/auth/login/login.factory.js"></script>
+        <script src="templates/auth/register/register.module.js"></script>
+        <script src="templates/auth/register/register.component.js"></script>
+        <script src="templates/nav/nav.module.js"></script>
+        <script src="templates/nav/nav.component.js"></script>
+        <script src="templates/about-us/about-us.module.js"></script>
+        <script src="templates/about-us/about-us.component.js"></script>
+        <script src="templates/door-list/door-list.module.js"></script>
+        <script src="templates/door-list/door-list.component.js"></script>
+        <script src="templates/door-detail/door-detail.module.js"></script>
+        <script src="templates/door-detail/door-detail.component.js"></script>
+        <script src="templates/blog/blog.module.js"></script>
+        <script src="templates/blog/blog.component.js"></script>
+        <script src="templates/contact-us/contact-us.module.js"></script>
+        <script src="templates/contact-us/contact-us.component.js"></script>
+        <script src="templates/footer/footer.module.js"></script>
+        <script src="templates/footer/footer.component.js"></script>
     </head>
     <body>
     <div class="page-wrap">
-        <nav></nav>
+    <nav></nav>
     <!-- Use a custom component to render a list of doors -->
-        <door-list></door-list>
+     <div ng-view></div>
 
     </div>
-    <div class="footer">Copyright © 2016 svyatis.com</div>
+    <footer></footer>
     </body>
 </html>

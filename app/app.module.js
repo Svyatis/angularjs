@@ -1,7 +1,16 @@
 'use strict';
 
-// Define the `phonecatApp` module
 angular.module('doorApp', [
-  // ...which depends on the `phoneList` module
-  'doorList', 'nav'
+    'ngRoute',
+    'ngCookies',
+    'login',
+    'register',
+    'nav',
+    'aboutUs',
+    'doorList',
+    'doorDetail',
+    'blog',
+    'contactUs',
+    'footer',
+    'angularUtils.directives.dirPagination'
 ]);

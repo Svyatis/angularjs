@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+        <form name="productForm" ng-submit="$ctrl.productLoad(productForm)">
+        <div class="form-group">
+            <label for="title">Name</label>
+            <input type="text" id="title" class="form-control" placeholder="Put product name here"
+                   ng-model="$ctrl.name" required>
+
+            <label for="content">Description</label>
+            <textarea id="content" class="form-control" rows="3" placeholder="Put product description here"
+                      ng-model="$ctrl.description" required></textarea>
+        </div>
+        <h4>Manufacturer:</h4>
+        <span class="checkbox">
+            <input name="manufactors[]" value="1" type="checkbox" class="input-assumption" id="Tokyo">
+            <label for="Tokyo" class="tag">Tokyo Inc.</label>
+        </span>
+        <span class="checkbox">
+            <input name="manufactors[]" value="3" type="checkbox" class="input-assumption" id="Paris">
+            <label for="Paris" class="tag">Paris Inc.</label>
+        </span>
+        <span class="checkbox">
+            <input name="manufactors[]" value="2" type="checkbox" class="input-assumption" id="NewYork">
+            <label for="NewYork" class="tag">New York Inc.</label><br>
+        </span>
+        <h4>Colors:</h4>
+        <span class="checkbox">
+        <input name="colors[]" value="1" type="checkbox" class="input-assumption" id="red">
+        <label for="red" class="tag">red</label>
+    </span>
+        <span class="checkbox">
+        <input name="colors[]" value="2" type="checkbox" class="input-assumption" id="blue">
+        <label for="blue" class="tag">blue</label>
+    </span>
+        <span class="checkbox">
+        <input name="colors[]" value="3" type="checkbox" class="input-assumption" id="black">
+        <label for="black" class="tag">black</label>
+    </span>
+        <span class="checkbox">
+        <input name="colors[]" value="4" type="checkbox" class="input-assumption" id="white">
+        <label for="white" class="tag">white</label>
+    </span>
+        <span class="checkbox">
+        <input name="colors[]" value="5" type="checkbox" class="input-assumption" id="green">
+        <label for="green" class="tag">green</label>
+    </span><br>
+        <div class="form-group">
+        <label for="upload" class="custom-file-upload">Choose file</label>
+            <input type="file" id="upload">
+        <input type="submit" value="Select"><br>
+        </div>
+
+        <div>
+        <input type="submit" name="save" value="Send" class="btn btn-warning"><br>
+        </div>
+
+        </form>
+
+        <hr>
+        <p>SearchBar</p>
+      <!--Sidebar content-->
+
+        <div class="searchBar">
+      <p> Search: </p>
+        <input title="filterSearch" ng-model="$ctrl.query" /><br>
+
+      <p> Sort by: </p>
+        <select title="filter" ng-model="$ctrl.orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+
+        </div>
+    </div>
+
+      <div class="col-md-7">
+      <div class="row">
+          <div ng-repeat="door in $ctrl.doors | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+              <div class="clearfix" ng-if="$index % 3 == 0"></div>
+              <div class="col-sm-4">
+                  <a href="#!/doors/{{door.id}}" class="thumb">
+                  <img ng-src="{{ door.image }}" class="imageThumb">
+                  </a>
+                  <b class="name">{{door.name}}</b><br>
+                  <b class="desc">{{door.description}}</b>
+              </div>
+          </div>
+      </div>
+      </div>
+
+  </div>
+</div>

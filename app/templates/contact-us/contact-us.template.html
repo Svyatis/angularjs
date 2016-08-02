@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="well">
+            <h3>Contact Form</h3>
+            <div class="panel-body">
+                <form name="contactForm" ng-submit="$ctrl.contactFormSend()">
+                    <div class="form-group">
+                        <label for="name"></label>
+                        <input type="text" id="name" class="form-control" placeholder="Name"
+                               ng-model="$ctrl.name" required>
+
+                        <label for="email"></label>
+                        <input type="email" id="email" class="form-control" placeholder="Email"
+                               ng-model="$ctrl.email" required>
+
+                        <label for="message"></label>
+                        <textarea id="message" class="form-control" rows="5" placeholder="Message"
+                               ng-model="$ctrl.message" required></textarea>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <input type="submit" name="save" value="Login" class="btn btn-warning btn-block">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

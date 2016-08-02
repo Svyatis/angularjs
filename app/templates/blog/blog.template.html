@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="titleText">Welcome to blog</div>
+            <form name="blogForm" ng-submit="$ctrl.submitForm()">
+                <div class="form-group">
+                    <label for="title"></label>
+                    <input type="text" id="title" class="form-control" placeholder="Put your title here"
+                           ng-model="$ctrl.blog.title" required>
+
+                    <label for="content"></label>
+                    <textarea id="content" class="form-control" rows="5" placeholder="Put your message here"
+                              ng-model="$ctrl.blog.content" required></textarea>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <input type="submit" name="save" value="Blog in" class="btn btn-warning btn-block">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-7">
+              <table dir-paginate="post in $ctrl.posts | orderBy:'-' | itemsPerPage: 6" class="postTable">
+                  <tbody class="postBody">
+                  <tr>
+                      <td class="name">{{post.title}}</td>
+                  </tr>
+                  <tr>
+                      <td class="desc">{{post.content}}</td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <button ng-click="$ctrl.postDelete(post.id)">Delete</button>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+            <dir-pagination-controls></dir-pagination-controls>
+        </div>
+    </div>
+</div>

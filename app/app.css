@@ -14,7 +14,6 @@ body {
     padding-top: 20px;
     color: whitesmoke;
     position: relative;
-    margin: 0;
     padding-bottom: 6rem;
     min-height: 100%;
 }
@@ -96,18 +95,26 @@ div .phonesCells  {
     border: 1px solid whitesmoke;
 }
 
-.imageThumb {
-    max-height: 200px;
+.imageThumb {  max-height: 200px;  }
+
+.imageThumb2 {
+    padding: 2px;
+    height: 150px;
+    width: 250px;
 }
 
 .name {
     font-size: large;
     color: #F89E11;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
 .desc {
     color: whitesmoke;
     font-size: small;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 p {
     color: whitesmoke;
@@ -115,4 +122,78 @@ p {
 
 .col-md-7 {
     width: 70%;
+}
+
+#loginGreet {
+    text-align: center;
+    padding-top: 10px;
+    color: #eea236;
+}
+
+.well {
+    background-color: black;
+    margin-top: 150px;
+    text-align: center;
+    color: #eea236;
+}
+
+.form-control {
+    background-color: black;
+    color: #eea236;
+}
+
+.doorId {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+#logoutButton {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#aboutUsText { color: #eea236; }
+
+.titleText { text-align: center; font-size: 30px }
+
+.container-fluid {
+    padding-top: 80px;
+}
+
+.col-md-7 {
+    padding-left: 100px;
+}
+
+.postBody {
+    border: 1px solid rgba(123, 0, 2, 0.78);
+    background-color: rgba(123, 0, 2, 0.2);
+    min-width: 100px;
+}
+
+.postTable {
+    min-width: 100%;
+}
+
+.pagination li a {
+    background-color: black;
+    border: 1px solid black;
+    color: #eea236;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus .pagination > li > a, .pagination > li > span, .pagination li a:hover, .pagination > li:last-child > a, .pagination > li:last-child > span, .pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus{
+    color: black;
+    background-color: #eea236;
+    border-color: #eea236;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.col-md-3 {
+    padding-left: 50px;
+}
+
+.searchBar {
+    padding-top: 50px;
 }
